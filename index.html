@@ -1,0 +1,815 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Petgill Lake — A Field Guide to the Quiet Swim Lake Above Howe Sound, BC</title>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="canonical" href="https://petgilllake.com/">
+<meta property="og:url" content="https://petgilllake.com/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Petgill Lake — A Field Guide to the Quiet Swim Lake Above Howe Sound, BC">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="An honest field guide to Petgill Lake near Britannia Beach — the rolling forest hike above Howe Sound, its bluff viewpoints, the warm mid-summer swimming, and how to pair the walk with an afternoon of water sports back in Squamish.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..500;1,9..144,300..500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #f4f1e7;
+    --paper-deep: #ece7d8;
+    --paper-dim: #e6e0cf;
+    --ink: #221e17;
+    --ink-soft: #3d382e;
+    --ink-mute: #77705f;
+    --rule: #d8d1bd;
+    --rule-strong: #beb59c;
+    --moss: #46583b;
+    --moss-deep: #2f3d29;
+    --rust: #a2552e;         /* arbutus bark */
+    --rust-deep: #7f3f21;
+    --sound: #48748f;        /* Howe Sound blue */
+    --sound-deep: #33566d;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  html, body {
+    margin: 0; padding: 0;
+    background: var(--paper); color: var(--ink);
+    font-family: "Inter", system-ui, -apple-system, sans-serif;
+    font-size: 17px;
+    line-height: 1.68;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  ::selection { background: var(--moss); color: var(--paper); }
+
+  a { color: inherit; text-decoration: none; }
+  .ln { border-bottom: 1px solid var(--rule-strong); transition: border-color 0.18s, color 0.18s; }
+  .ln:hover { border-bottom-color: var(--rust); color: var(--rust-deep); }
+
+  h1, h2, h3 {
+    font-family: "Fraunces", "Times New Roman", serif;
+    font-weight: 400;
+    line-height: 1.06;
+    letter-spacing: -0.02em;
+    margin: 0;
+    color: var(--ink);
+    font-variation-settings: "opsz" 144, "SOFT" 30;
+  }
+  h1 { font-size: clamp(2.9rem, 7vw, 5rem); font-weight: 340; letter-spacing: -0.028em; }
+  h2 { font-size: clamp(1.6rem, 3vw, 2.25rem); }
+  h3 { font-size: 1.25rem; font-weight: 500; line-height: 1.3; }
+  em { font-style: italic; }
+  p  { margin: 0 0 1.1rem; color: var(--ink-soft); font-size: 1.03rem; line-height: 1.74; }
+
+  .shell { max-width: 1120px; margin: 0 auto; padding: 0 1.6rem; }
+  .col    { max-width: 720px; margin: 0 auto; padding: 0 1.6rem; }
+
+  .eyebrow {
+    display: flex; align-items: center; gap: 1rem;
+    font-size: 0.7rem; letter-spacing: 0.26em; text-transform: uppercase;
+    font-weight: 600; color: var(--ink-mute);
+    margin-bottom: 1.1rem;
+  }
+  .eyebrow::after { content: ""; flex: 1; height: 1px; background: var(--rule); }
+  .eyebrow.center { justify-content: center; }
+  .eyebrow.center::before { content: ""; flex: 1; height: 1px; background: var(--rule); }
+
+  /* ---------- NAV ---------- */
+  header.masthead {
+    position: sticky; top: 0; z-index: 60;
+    background: rgba(244,241,231,0.9);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--rule);
+  }
+  .masthead .bar {
+    max-width: 1120px; margin: 0 auto;
+    padding: 0.85rem 1.6rem;
+    display: flex; align-items: baseline; justify-content: space-between; gap: 1.5rem;
+  }
+  .wordmark { font-family: "Fraunces", serif; font-size: 1.05rem; font-weight: 500; letter-spacing: -0.01em; }
+  .wordmark .vol {
+    font-family: "Inter", sans-serif; font-weight: 500;
+    font-size: 0.62rem; letter-spacing: 0.24em; text-transform: uppercase;
+    color: var(--ink-mute); margin-left: 0.85rem;
+  }
+  .masthead nav { display: flex; gap: 1.4rem; }
+  .masthead nav a {
+    font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase;
+    font-weight: 600; color: var(--ink-soft);
+  }
+  .masthead nav a:hover { color: var(--rust-deep); }
+  @media (max-width: 720px) {
+    .masthead nav { display: none; }
+    .wordmark .vol { display: none; }
+  }
+
+  /* ---------- HERO ---------- */
+  .hero { border-bottom: 1px solid var(--rule); background: var(--paper-deep); }
+  .hero svg { display: block; width: 100%; height: auto; }
+
+  /* coordinate ribbon */
+  .ribbon {
+    border-bottom: 1px solid var(--rule);
+    background: var(--paper);
+  }
+  .ribbon .row {
+    max-width: 1120px; margin: 0 auto; padding: 0.7rem 1.6rem;
+    display: flex; flex-wrap: wrap; align-items: baseline;
+    gap: 0.4rem 2.4rem;
+    font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase;
+    font-weight: 500; color: var(--ink-mute);
+  }
+  .ribbon .row b { color: var(--ink); font-weight: 600; letter-spacing: 0.1em; }
+  .ribbon .row .approx { letter-spacing: 0.06em; text-transform: none; }
+
+  /* ---------- TITLE ---------- */
+  .titleblock { padding: 5.5rem 0 3.5rem; }
+  .titleblock .kicker {
+    font-size: 0.7rem; letter-spacing: 0.28em; text-transform: uppercase;
+    font-weight: 600; color: var(--rust-deep); margin-bottom: 1.4rem;
+  }
+  .titleblock .deck {
+    font-family: "Fraunces", serif; font-style: italic; font-weight: 340;
+    font-size: clamp(1.25rem, 2.4vw, 1.6rem); line-height: 1.45;
+    color: var(--ink-soft); max-width: 34ch; margin-top: 1.6rem;
+    letter-spacing: -0.005em;
+  }
+
+  /* highway note */
+  .roadnote {
+    margin: 0 0 4.5rem;
+    border: 1px solid var(--rust);
+    border-left-width: 4px;
+    background: rgba(162,85,46,0.07);
+    padding: 1.35rem 1.6rem;
+    max-width: 720px;
+  }
+  .roadnote strong {
+    display: block; font-size: 0.68rem; letter-spacing: 0.24em; text-transform: uppercase;
+    color: var(--rust-deep); font-weight: 600; margin-bottom: 0.5rem;
+  }
+  .roadnote p { margin: 0; font-size: 0.98rem; }
+
+  /* ---------- QUICK TAKE ---------- */
+  .quicktake { padding: 0 0 6rem; }
+  .quicktake .split {
+    display: grid; grid-template-columns: 340px 1fr; gap: 4.5rem;
+    align-items: start;
+  }
+  @media (max-width: 880px) { .quicktake .split { grid-template-columns: 1fr; gap: 2.5rem; } }
+  .ledger { border-top: 2px solid var(--ink); }
+  .ledger dl { margin: 0; }
+  .ledger .li {
+    display: flex; justify-content: space-between; align-items: baseline; gap: 1rem;
+    padding: 0.8rem 0.15rem;
+    border-bottom: 1px solid var(--rule);
+  }
+  .ledger dt { font-size: 0.74rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; color: var(--ink-mute); }
+  .ledger dd { margin: 0; font-family: "Fraunces", serif; font-size: 1.12rem; font-weight: 500; text-align: right; }
+  .ledger dd small { display: block; font-family: "Inter", sans-serif; font-size: 0.72rem; font-weight: 400; color: var(--ink-mute); letter-spacing: 0.02em; }
+  .quicktake .intro p:first-of-type { font-family: "Fraunces", serif; font-size: 1.32rem; line-height: 1.52; color: var(--ink); font-weight: 380; }
+
+  /* ---------- ESSAY ---------- */
+  section.essay { padding: 6rem 0; border-top: 1px solid var(--rule); }
+  .essay .col > p:first-of-type::first-letter {
+    font-family: "Fraunces", serif;
+    font-weight: 400;
+    float: left;
+    font-size: 4.6rem;
+    line-height: 0.78;
+    padding: 0.35rem 0.75rem 0 0;
+    color: var(--moss-deep);
+  }
+
+  /* ---------- BLUFFS (numbered motif) ---------- */
+  section.bluffs { padding: 6.5rem 0; background: var(--paper-deep); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+  .bluff-list { max-width: 860px; margin: 0 auto; padding: 0 1.6rem; }
+  .bluff {
+    display: grid; grid-template-columns: 130px 1fr; gap: 2.2rem;
+    padding: 2.4rem 0;
+    border-top: 1px solid var(--rule-strong);
+    align-items: start;
+  }
+  .bluff:first-of-type { border-top: none; padding-top: 1rem; }
+  .bluff .no {
+    font-family: "Fraunces", serif; font-weight: 300;
+    font-size: clamp(3rem, 6vw, 4.4rem); line-height: 0.85;
+    color: var(--sound); letter-spacing: -0.03em;
+    font-variation-settings: "opsz" 144, "SOFT" 30;
+  }
+  .bluff .no small {
+    display: block; font-family: "Inter", sans-serif; font-size: 0.64rem;
+    letter-spacing: 0.24em; text-transform: uppercase; font-weight: 600;
+    color: var(--ink-mute); margin-top: 0.7rem;
+  }
+  .bluff h3 { margin-bottom: 0.5rem; }
+  .bluff p { margin: 0; font-size: 0.99rem; }
+  @media (max-width: 640px) {
+    .bluff { grid-template-columns: 1fr; gap: 0.9rem; }
+    .bluff .no { font-size: 2.6rem; }
+  }
+
+  /* ---------- THE LAKE ---------- */
+  section.lake { padding: 6rem 0; }
+  .lake .duo {
+    max-width: 1120px; margin: 2.5rem auto 0; padding: 0 1.6rem;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem;
+  }
+  @media (max-width: 820px) { .lake .duo { grid-template-columns: 1fr; gap: 1.5rem; } }
+  .lake .duo p { font-size: 1rem; }
+
+  /* pull quote */
+  .pull {
+    max-width: 760px; margin: 5.5rem auto 0; padding: 2.6rem 1.6rem;
+    border-top: 1px solid var(--rule-strong); border-bottom: 1px solid var(--rule-strong);
+    text-align: center;
+  }
+  .pull blockquote {
+    margin: 0;
+    font-family: "Fraunces", serif; font-style: italic; font-weight: 340;
+    font-size: clamp(1.4rem, 3vw, 1.9rem); line-height: 1.4;
+    color: var(--ink); letter-spacing: -0.01em;
+  }
+  .pull .attr { margin-top: 1rem; font-size: 0.7rem; letter-spacing: 0.24em; text-transform: uppercase; font-weight: 600; color: var(--ink-mute); }
+
+  /* ---------- SEASONS TABLE ---------- */
+  section.seasons { padding: 6rem 0; border-top: 1px solid var(--rule); }
+  .season-table { width: 100%; border-collapse: collapse; margin-top: 2rem; }
+  .season-table th {
+    text-align: left; font-size: 0.68rem; letter-spacing: 0.22em; text-transform: uppercase;
+    font-weight: 600; color: var(--ink-mute);
+    padding: 0 1rem 0.7rem 0.15rem; border-bottom: 2px solid var(--ink);
+  }
+  .season-table td { padding: 1rem 1rem 1rem 0.15rem; border-bottom: 1px solid var(--rule); vertical-align: top; font-size: 0.95rem; color: var(--ink-soft); line-height: 1.6; }
+  .season-table td.mo { font-family: "Fraunces", serif; font-style: italic; font-size: 1.05rem; color: var(--ink); white-space: nowrap; }
+  .season-table td.verdict { font-weight: 600; color: var(--moss-deep); font-size: 0.85rem; letter-spacing: 0.06em; text-transform: uppercase; white-space: nowrap; }
+  @media (max-width: 680px) {
+    .season-table thead { display: none; }
+    .season-table td { display: block; border-bottom: none; padding: 0.15rem 0; }
+    .season-table td.mo { padding-top: 1.1rem; }
+    .season-table tr { display: block; border-bottom: 1px solid var(--rule); padding-bottom: 1.1rem; }
+  }
+
+  /* ---------- HONEST ---------- */
+  section.honest { padding: 6rem 0; border-top: 1px solid var(--rule); background: var(--paper-deep); }
+  section.honest em { color: var(--ink); }
+
+  /* ---------- TRAILHEAD SUPPORT ---------- */
+  section.support { padding: 6rem 0; border-top: 1px solid var(--rule); }
+  .support .card {
+    max-width: 720px; margin: 2rem auto 0; padding: 0 1.6rem;
+  }
+  .support .cta {
+    display: inline-block; margin-top: 0.4rem;
+    padding: 0.7rem 1.5rem;
+    border: 1px solid var(--ink);
+    border-radius: 999px;
+    font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 600;
+    transition: background 0.18s, color 0.18s;
+  }
+  .support .cta:hover { background: var(--ink); color: var(--paper); }
+
+  /* ---------- FAQ ---------- */
+  section.faq { padding: 6rem 0 6.5rem; border-top: 1px solid var(--rule); }
+  .faq details { border-bottom: 1px solid var(--rule); }
+  .faq details:first-of-type { border-top: 2px solid var(--ink); }
+  .faq summary {
+    cursor: pointer; list-style: none;
+    display: flex; justify-content: space-between; align-items: baseline; gap: 1.5rem;
+    padding: 1.15rem 0.15rem;
+    font-family: "Fraunces", serif; font-size: 1.12rem; font-weight: 500;
+    color: var(--ink);
+  }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary::after { content: "+"; font-family: "Inter", sans-serif; font-weight: 300; font-size: 1.3rem; color: var(--ink-mute); transition: transform 0.2s; }
+  .faq details[open] summary::after { transform: rotate(45deg); }
+  .faq details p { padding: 0 0.15rem 1.3rem; margin: 0; font-size: 0.98rem; max-width: 62ch; }
+
+  /* ---------- FOOTER ---------- */
+  footer.end { border-top: 1px solid var(--rule); background: var(--paper-dim); padding: 4rem 0 2.5rem; }
+  .end .grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 3rem; }
+  @media (max-width: 720px) { .end .grid { grid-template-columns: 1fr; gap: 2rem; } }
+  .end h4 { font-size: 0.68rem; letter-spacing: 0.24em; text-transform: uppercase; font-weight: 600; color: var(--ink-mute); margin: 0 0 0.9rem; }
+  .end p { font-size: 0.9rem; margin: 0; }
+  .end ul { list-style: none; margin: 0; padding: 0; }
+  .end li { margin-bottom: 0.45rem; font-size: 0.9rem; }
+  .end li a { color: var(--ink-soft); }
+  .end li a:hover { color: var(--rust-deep); }
+  .colophon {
+    margin-top: 3rem; padding-top: 1.4rem; border-top: 1px solid var(--rule);
+    display: flex; justify-content: space-between; flex-wrap: wrap; gap: 0.8rem;
+    font-size: 0.76rem; color: var(--ink-mute);
+  }
+  .colophon em { font-family: "Fraunces", serif; }
+</style>
+</head>
+<body>
+
+<!-- ===================== MASTHEAD ===================== -->
+<header class="masthead">
+  <div class="bar">
+    <a class="wordmark" href="https://seatoskytrails.com/">Petgill Lake<span class="vol">Sea to Sky Trails · Vol. II, No. 07</span></a>
+    <nav>
+      <a href="#walk">The Walk In</a>
+      <a href="#bluffs">The Bluffs</a>
+      <a href="#lake">The Lake</a>
+      <a href="#seasons">Seasons</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ===================== HERO — looking down from a bluff over Howe Sound ===================== -->
+<div class="hero" aria-hidden="false">
+  <svg viewBox="0 0 1200 620" role="img" aria-label="Hand-drawn scene looking down from a mossy bluff over Howe Sound, with forested islands below and a small lake tucked into second-growth forest">
+    <defs>
+      <linearGradient id="pg-sky" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#e9e2cd"/>
+        <stop offset="1" stop-color="#dbd8c2"/>
+      </linearGradient>
+      <linearGradient id="pg-water" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#6d92a8"/>
+        <stop offset="0.55" stop-color="#48748f"/>
+        <stop offset="1" stop-color="#33566d"/>
+      </linearGradient>
+    </defs>
+
+    <!-- sky -->
+    <rect x="0" y="0" width="1200" height="150" fill="url(#pg-sky)"/>
+    <circle cx="990" cy="66" r="30" fill="#f2ecd6" opacity="0.9"/>
+    <circle cx="990" cy="66" r="44" fill="#f2ecd6" opacity="0.25"/>
+
+    <!-- far mainland across the Sound -->
+    <path d="M0 150 L90 122 L180 138 L300 108 L420 134 L560 100 L700 128 L840 112 L980 134 L1100 118 L1200 132 L1200 152 L0 152 Z" fill="#8e9584" opacity="0.85"/>
+    <path d="M0 152 L1200 152 L1200 168 L0 168 Z" fill="#7c8a86" opacity="0.5"/>
+
+    <!-- Howe Sound, seen from above: broad water field -->
+    <path d="M0 152 L1200 152 L1200 470 L0 470 Z" fill="url(#pg-water)"/>
+
+    <!-- islands (flat layered shapes, high viewpoint) -->
+    <g>
+      <path d="M240 218 C300 196 396 200 440 224 C470 240 452 262 396 268 C316 276 216 252 240 218 Z" fill="#4b5c48"/>
+      <path d="M262 224 C312 208 382 210 416 228 C438 240 420 254 376 258 C312 264 240 246 262 224 Z" fill="#3c4b3a"/>
+      <path d="M600 300 C650 284 740 288 778 308 C806 322 786 342 726 346 C650 352 566 328 600 300 Z" fill="#465745"/>
+      <path d="M624 306 C664 294 726 296 758 312 C776 322 760 334 716 338 C664 342 600 326 624 306 Z" fill="#38473a"/>
+      <path d="M960 240 C1000 228 1064 232 1092 248 C1112 260 1096 274 1052 278 C1000 282 934 260 960 240 Z" fill="#4b5c48"/>
+      <path d="M420 386 C448 376 496 378 518 392 C534 402 520 412 488 414 C450 416 402 400 420 386 Z" fill="#42533f"/>
+    </g>
+
+    <!-- wakes + wave strokes on the sound -->
+    <g fill="none" stroke="#c9d6d6" stroke-linecap="round">
+      <path d="M150 200 q22 -7 44 0 t44 0" stroke-width="2" opacity="0.5"/>
+      <path d="M840 200 q22 -7 44 0 t44 0" stroke-width="2" opacity="0.45"/>
+      <path d="M540 246 q22 -7 44 0 t44 0" stroke-width="2" opacity="0.4"/>
+      <path d="M120 330 q24 -8 48 0 t48 0 t48 0" stroke-width="2.2" opacity="0.5"/>
+      <path d="M760 396 q24 -8 48 0 t48 0" stroke-width="2.2" opacity="0.45"/>
+      <path d="M950 330 q24 -8 48 0 t48 0" stroke-width="2.2" opacity="0.4"/>
+      <!-- a small ferry + wake -->
+      <path d="M312 342 L392 356" stroke-width="1.6" opacity="0.55"/>
+      <path d="M308 350 L388 364" stroke-width="1.6" opacity="0.35"/>
+    </g>
+    <g>
+      <rect x="392" y="346" width="26" height="8" rx="2" fill="#e8e2cc"/>
+      <rect x="398" y="340" width="12" height="6" rx="1.5" fill="#e8e2cc"/>
+    </g>
+
+    <!-- forested bench below the bluff, with Petgill tucked in (left-mid) -->
+    <path d="M0 430 C120 402 260 408 380 434 C470 452 560 456 660 470 L660 620 L0 620 Z" fill="#3c4d36"/>
+    <g fill="#2f3d29">
+      <path d="M60 434 l13 -26 l13 26 Z"/>
+      <path d="M96 428 l12 -24 l12 24 Z"/>
+      <path d="M140 438 l14 -28 l14 28 Z"/>
+      <path d="M196 432 l12 -24 l12 24 Z"/>
+      <path d="M244 442 l13 -26 l13 26 Z"/>
+      <path d="M300 440 l12 -24 l12 24 Z"/>
+      <path d="M352 450 l14 -28 l14 28 Z"/>
+      <path d="M414 452 l12 -24 l12 24 Z"/>
+      <path d="M470 462 l13 -26 l13 26 Z"/>
+      <path d="M540 466 l12 -24 l12 24 Z"/>
+    </g>
+
+    <!-- the lake, tucked in forest -->
+    <ellipse cx="270" cy="502" rx="118" ry="34" fill="#4f7d92"/>
+    <ellipse cx="270" cy="502" rx="118" ry="34" fill="none" stroke="#2f3d29" stroke-width="5" opacity="0.55"/>
+    <ellipse cx="252" cy="496" rx="72" ry="18" fill="#67909f" opacity="0.65"/>
+    <!-- lily pads -->
+    <g fill="#5f7a4a">
+      <circle cx="200" cy="512" r="5"/>
+      <circle cx="214" cy="518" r="4"/>
+      <circle cx="228" cy="511" r="4.5"/>
+      <circle cx="330" cy="508" r="5"/>
+      <circle cx="344" cy="502" r="4"/>
+      <circle cx="318" cy="515" r="4"/>
+    </g>
+    <!-- sunning log -->
+    <path d="M238 528 L322 522" stroke="#6d5136" stroke-width="6" stroke-linecap="round" fill="none"/>
+    <!-- forest ringing the lake -->
+    <g fill="#354430">
+      <path d="M136 486 l12 -24 l12 24 Z"/>
+      <path d="M170 476 l11 -22 l11 22 Z"/>
+      <path d="M356 480 l12 -24 l12 24 Z"/>
+      <path d="M392 490 l11 -22 l11 22 Z"/>
+      <path d="M254 466 l10 -20 l10 20 Z"/>
+      <path d="M296 462 l10 -20 l10 20 Z"/>
+    </g>
+
+    <!-- treetops rising from below the bluff, right side -->
+    <g fill="#334028">
+      <path d="M688 500 l22 -46 l22 46 l-14 -6 l18 40 l-16 -6 l20 44 l-52 0 l20 -44 l-16 6 l18 -40 Z"/>
+      <path d="M770 522 l20 -42 l20 42 l-13 -5 l17 37 l-15 -6 l18 40 l-47 0 l18 -40 l-15 6 l17 -37 Z"/>
+      <path d="M846 508 l21 -44 l21 44 l-14 -6 l18 39 l-15 -6 l19 42 l-50 0 l19 -42 l-15 6 l18 -39 Z"/>
+    </g>
+
+    <!-- foreground bluff: rock ledge across the bottom-right -->
+    <path d="M560 620 L600 560 C680 540 760 548 840 560 C950 576 1080 570 1200 540 L1200 620 Z" fill="#8f8672"/>
+    <path d="M560 620 L600 560 C680 540 760 548 840 560 C950 576 1080 570 1200 540" fill="none" stroke="#6f6754" stroke-width="2.5" stroke-linecap="round"/>
+    <g fill="none" stroke="#6f6754" stroke-width="1.4" stroke-linecap="round" opacity="0.7">
+      <path d="M660 590 C700 582 740 582 780 588"/>
+      <path d="M860 596 C920 602 990 598 1050 588"/>
+      <path d="M1080 600 C1120 594 1160 588 1195 580"/>
+    </g>
+    <!-- moss patches on the ledge -->
+    <g fill="#5c6e45" opacity="0.85">
+      <ellipse cx="700" cy="600" rx="26" ry="7"/>
+      <ellipse cx="920" cy="608" rx="34" ry="8"/>
+      <ellipse cx="1120" cy="592" rx="24" ry="6"/>
+    </g>
+
+    <!-- arbutus leaning off the bluff (rust trunk, peeling bark, green crown) -->
+    <g>
+      <path d="M1058 566 C1046 520 1020 484 976 458 C960 448 948 434 944 418" fill="none" stroke="#a2552e" stroke-width="11" stroke-linecap="round"/>
+      <path d="M1024 498 C1006 484 992 470 986 452" fill="none" stroke="#a2552e" stroke-width="7" stroke-linecap="round"/>
+      <path d="M1040 528 C1056 512 1064 494 1064 476" fill="none" stroke="#a2552e" stroke-width="6" stroke-linecap="round"/>
+      <!-- peeling bark curls -->
+      <g fill="none" stroke="#7f3f21" stroke-width="1.6" stroke-linecap="round" opacity="0.8">
+        <path d="M1050 550 C1046 544 1046 538 1050 534"/>
+        <path d="M1036 522 C1032 516 1032 510 1036 506"/>
+        <path d="M1006 486 C1001 481 1000 475 1003 470"/>
+      </g>
+      <!-- crown -->
+      <g fill="#4c6039">
+        <ellipse cx="940" cy="408" rx="52" ry="26"/>
+        <ellipse cx="988" cy="436" rx="40" ry="20"/>
+        <ellipse cx="1066" cy="466" rx="34" ry="17"/>
+        <ellipse cx="900" cy="432" rx="30" ry="15"/>
+      </g>
+      <g fill="#3e5230">
+        <ellipse cx="952" cy="420" rx="30" ry="13"/>
+        <ellipse cx="1052" cy="474" rx="20" ry="9"/>
+      </g>
+    </g>
+
+    <!-- a hiker's boots at the bluff edge (tiny, bottom-left of the ledge) -->
+    <g fill="#221e17" opacity="0.85">
+      <rect x="632" y="592" width="20" height="8" rx="3"/>
+      <rect x="660" y="594" width="20" height="8" rx="3"/>
+    </g>
+  </svg>
+</div>
+
+<!-- ===================== COORDINATE RIBBON ===================== -->
+<div class="ribbon">
+  <div class="row">
+    <span><b>49.66° N&thinsp;·&thinsp;123.20° W</b> <span class="approx">(approx.)</span></span>
+    <span>Round trip <b>≈ 11–12 km</b></span>
+    <span>Cumulative gain <b>≈ 600 m</b>, rolling</span>
+    <span>Time <b>4–6 h</b></span>
+    <span>Facilities <b>None</b></span>
+    <span>Territory <b>Sḵwx̱wú7mesh Úxwumixw</b></span>
+  </div>
+</div>
+
+<!-- ===================== TITLE ===================== -->
+<div class="col titleblock">
+  <div class="kicker">Sea to Sky Trails · Vol. II, No. 07 · South of Squamish, near Britannia Beach</div>
+  <h1>Petgill Lake</h1>
+  <p class="deck">The corridor&rsquo;s quietest swim is hidden in second-growth forest, six rolling kilometres above Howe Sound &mdash; and most people drive right past it.</p>
+</div>
+
+<!-- ===================== ROAD NOTE ===================== -->
+<div class="col">
+  <div class="roadnote">
+    <strong>Read this before you drive up</strong>
+    <p>The traditional start crosses Highway 99 near Murrin Provincial Park, and access at this trailhead has been subject to change over the years. Verify the current trailhead status and parking rules before you go, be extremely careful anywhere near the highway &mdash; traffic is fast and sightlines are short &mdash; and know that the Murrin lot fills early on summer weekends.</p>
+  </div>
+</div>
+
+<!-- ===================== QUICK TAKE ===================== -->
+<section class="quicktake" id="quicktake">
+  <div class="shell split">
+    <div class="ledger">
+      <dl>
+        <div class="li"><dt>Objective</dt><dd>A small forest lake</dd></div>
+        <div class="li"><dt>Distance</dt><dd>≈ 11–12 km <small>round trip</small></dd></div>
+        <div class="li"><dt>Gain</dt><dd>≈ 600 m <small>cumulative, rolling</small></dd></div>
+        <div class="li"><dt>Character</dt><dd>Moss, bluffs, roots</dd></div>
+        <div class="li"><dt>Swim</dt><dd>Yes <small>genuinely warm by mid-summer</small></dd></div>
+        <div class="li"><dt>Crowds</dt><dd>Light <small>quiet on weekdays</small></dd></div>
+        <div class="li"><dt>Facilities</dt><dd>None <small>pack out everything</small></dd></div>
+      </dl>
+    </div>
+    <div class="intro">
+      <div class="eyebrow">Quick take</div>
+      <p>Petgill is the hike for people who think they&rsquo;ve done everything between Vancouver and Whistler. It starts near Murrin Provincial Park, climbs into mossy second-growth, breaks out onto bluffs over Howe Sound, and ends at a lake warm enough for real swimming.</p>
+      <p>That last part deserves emphasis. Most water in this corridor is glacial, and &ldquo;swimmable&rdquo; usually means &ldquo;survivable for ninety seconds.&rdquo; Petgill is different &mdash; a shallow, forest-ringed bowl that soaks up summer heat until, by mid-July, you can float around among the lily pads without a countdown running in your head. Brohm Lake north of town is the other famous warm one; Petgill is the one you earn on foot, which is exactly why it stays quiet.</p>
+      <p>Budget more time than the stats suggest. The trail rolls constantly &mdash; short climbs, short drops, repeat &mdash; and the 11-odd kilometres feel longer than they read.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ESSAY / THE WALK IN ===================== -->
+<section class="essay" id="walk">
+  <div class="col">
+    <div class="eyebrow">The Walk In</div>
+    <h2 style="margin-bottom:2rem;">A trail that refuses to pick a direction.</h2>
+    <p>Somewhere in the first kilometre you stop hearing the highway, and that&rsquo;s when Petgill starts. The forest here is second-growth &mdash; big stumps from the old logging days, new trees crowding up between them &mdash; and the moss has taken everything it can reach: logs, boulders, the edges of the trail itself. On a wet morning the whole understorey glows green. On a hot afternoon it smells like sun on fir needles, which is its own argument for coming.</p>
+    <p>The trail&rsquo;s defining habit is that it will not commit to going up. It climbs, drops, sidehills, climbs again. On paper the cumulative gain is on the order of six hundred metres; on your legs it feels like more, because you pay for some of it twice &mdash; once on the way in and again on the way out, when the &ldquo;descent&rdquo; keeps finding new rises to throw at you. Nobody warns first-timers about the return leg. Consider yourself warned.</p>
+    <p>The reward for all that indecision comes partway in, when the forest thins and the trail steps out onto open granite. These bluff viewpoints are the best moments of the hike &mdash; sudden windows over Howe Sound, with the water a long way down and the islands laid out like a raised-relief map. They also make natural pacing marks, so we&rsquo;ve numbered them below the way we count them in our own field notes.</p>
+    <p>Bring more water than a 12&nbsp;km day usually asks for. The rolling profile works you harder than the number implies, and there&rsquo;s nothing to refill from that you&rsquo;d want to drink untreated.</p>
+  </div>
+</section>
+
+<!-- ===================== BLUFF VIEWPOINTS ===================== -->
+<section class="bluffs" id="bluffs">
+  <div class="bluff-list">
+    <div class="eyebrow">The Bluffs, in order of appearance</div>
+    <h2 style="margin-bottom:1.5rem;">Four windows over the Sound.</h2>
+
+    <div class="bluff">
+      <div class="no">01<small>The first look</small></div>
+      <div>
+        <h3>Where the forest first lets go.</h3>
+        <p>Early in the climb the trees open for your first clean look at Howe Sound. It arrives sooner than you expect and it&rsquo;s a good calibration point: if the party is struggling here, the rolling middle section will not improve their mood. If everyone&rsquo;s grinning, carry on.</p>
+      </div>
+    </div>
+
+    <div class="bluff">
+      <div class="no">02<small>The lunch ledge</small></div>
+      <div>
+        <h3>Open granite, moss at the margins.</h3>
+        <p>The most generous of the viewpoints &mdash; room to sit, sun on the rock, and the Sound spread out below with the ferries drawing slow white lines across it. Most groups break here in at least one direction. Stay back from the lip; the moss that makes these bluffs beautiful is also slick when damp, and the edges are unforgiving.</p>
+      </div>
+    </div>
+
+    <div class="bluff">
+      <div class="no">03<small>The reminder</small></div>
+      <div>
+        <h3>A smaller window, deeper in.</h3>
+        <p>By now you&rsquo;re well into the rolling middle stretch and the views come briefer &mdash; a gap in the canopy, a shoulder of rock, the water flashing blue-grey through the trees. This one exists mostly to remind you why you&rsquo;re up here, right around the point where the ups and downs start feeling personal.</p>
+      </div>
+    </div>
+
+    <div class="bluff">
+      <div class="no">04<small>The lake</small></div>
+      <div>
+        <h3>Not a bluff at all.</h3>
+        <p>The final window is the one you walked in for: the trees part and Petgill Lake sits there, small and dark-green and completely indifferent to the effort involved. No crowd noise, no parking lot hum. Usually just dragonflies, lily pads, and &mdash; if you&rsquo;ve timed it right &mdash; nobody else.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== THE LAKE ===================== -->
+<section class="lake" id="lake">
+  <div class="col">
+    <div class="eyebrow">The Lake</div>
+    <h2>Warm water, lily pads, and logs to lie on.</h2>
+  </div>
+  <div class="duo">
+    <div>
+      <p>Petgill&rsquo;s party trick is temperature. By mid-summer the lake is warm enough for actual, unhurried swimming &mdash; a rarity in a corridor where most lakes run glacier-cold all year. Lily pads crowd the quiet margins, and half-sunken logs around the shore serve as diving platforms, sun decks, and lunch benches, depending on your ambitions. On a weekday you can have the entire place to yourself for an hour at a stretch.</p>
+      <p>Swim sensibly: it&rsquo;s a remote lake with no lifeguard and no easy way out if something goes wrong. Ease in, check for submerged wood before any enthusiastic entries, and keep an eye on anyone in your group who runs cold.</p>
+    </div>
+    <div>
+      <p>There are no facilities of any kind at the lake &mdash; no outhouse, no bins, no signage to clean up after you. Everything you carry in comes back out, including orange peels, apple cores, and whatever your dog produces. The lake stays lovely because the people who make the effort to walk in have, so far, mostly respected it. Be part of the &ldquo;mostly.&rdquo;</p>
+      <p>Give yourself real time up here. The most common Petgill regret isn&rsquo;t the rolling trail &mdash; it&rsquo;s hikers who spend three hours walking in, ten minutes at the water, and three hours walking out. An hour at the lake is the minimum sensible dose.</p>
+    </div>
+  </div>
+
+  <div class="pull">
+    <blockquote>&ldquo;Every other lake this close to the highway makes you share it. Petgill makes you earn it &mdash; and then it&rsquo;s yours.&rdquo;</blockquote>
+    <div class="attr">Field notes, July</div>
+  </div>
+</section>
+
+<!-- ===================== SEASONS ===================== -->
+<section class="seasons" id="seasons">
+  <div class="col">
+    <div class="eyebrow">When to Go</div>
+    <h2>The swim window is short. The hike window isn&rsquo;t.</h2>
+    <table class="season-table">
+      <thead>
+        <tr><th>Months</th><th>What you get</th><th>Verdict</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="mo">Nov &ndash; Mar</td>
+          <td>Short days, wet moss, and possible snow on the upper trail. The bluffs can be beautiful in clear cold weather, but check current conditions and turn around early &mdash; this is no place to finish in the dark.</td>
+          <td class="verdict">Experienced only</td>
+        </tr>
+        <tr>
+          <td class="mo">Apr &ndash; May</td>
+          <td>The forest at its greenest and the trail at its muddiest. Lake still cold. Quietest season of all &mdash; you may not see another person.</td>
+          <td class="verdict">For the moss</td>
+        </tr>
+        <tr>
+          <td class="mo">June</td>
+          <td>Trail dries out, days stretch long, and the lake starts its slow climb toward swimmable. Brave people swim; sensible people wait a few weeks.</td>
+          <td class="verdict">Warming up</td>
+        </tr>
+        <tr>
+          <td class="mo">Jul &ndash; Aug</td>
+          <td>Prime time. Warm water, sunny bluffs, dragonflies. The catch is at the bottom: Murrin&rsquo;s parking fills early on summer weekends, so arrive at breakfast hour or come midweek.</td>
+          <td class="verdict">The swim window</td>
+        </tr>
+        <tr>
+          <td class="mo">Sep &ndash; Oct</td>
+          <td>The locals&rsquo; pick. Water holds some warmth into early September, crowds vanish, and the low autumn light on the Sound from the bluffs is the best of the year.</td>
+          <td class="verdict">Golden hour</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ===================== HONEST NOTE ===================== -->
+<section class="honest">
+  <div class="col">
+    <div class="eyebrow">Honest Note</div>
+    <h2 style="margin-bottom:1.8rem;">What the brochures leave out.</h2>
+    <p>First, the stats lie by omission. Eleven-ish kilometres and six hundred-ish metres sounds moderate, but the constant rolling means <em>it hikes bigger than it reads</em>. Fit hikers do it comfortably; anyone expecting a flat forest stroll to a swim hole will be filing complaints by the halfway mark.</p>
+    <p>Second, the start is the sketchiest part of the day, and not because of the terrain. The traditional approach involves crossing Highway 99, where traffic moves fast and drivers aren&rsquo;t looking for pedestrians. Access arrangements at this trailhead have changed before and could change again &mdash; <em>check the current trailhead status and parking rules before you commit</em>, and treat the highway with more respect than anything on the trail.</p>
+    <p>Third, the views are intermittent, not constant. Between the numbered bluffs you&rsquo;re in the trees, and if you need a summit panorama to feel a hike was worth it, this isn&rsquo;t your day. Petgill&rsquo;s pleasures are quieter: moss, birdsong, warm water, and the particular smugness of swimming in a lake most highway traffic doesn&rsquo;t know exists.</p>
+    <p>Last: no facilities means no facilities. Deal with everything accordingly, and pack out every scrap.</p>
+  </div>
+</section>
+
+<!-- ===================== TRAILHEAD SUPPORT ===================== -->
+<section class="support" id="support">
+  <div class="col">
+    <div class="eyebrow">Trailhead Support</div>
+    <h2>This one&rsquo;s a hike, not a paddle.</h2>
+  </div>
+  <div class="card">
+    <p>Petgill needs boots, water, and an early start &mdash; no boat required. If you want gear support for a Sea to Sky day (delivered canoes and boards for the lakes you <em>can</em> paddle, before or after this hike), the local outfit we trust runs everything through Rented Local.</p>
+    <p><a class="cta" href="https://rentedlocal.com/Profile?userId=698a2b3bca1e37a683b7bfeb" target="_blank" rel="noopener">Rentals &amp; delivery</a></p>
+    <p style="margin-top:1.6rem;">And if you come off the trail by early afternoon with energy to spare, the classic double-header is an afternoon of water sports back in Squamish &mdash; <a class="ln" href="https://squamishcanoerental.com/">Squamish Canoe Rental</a> puts canoes (up to three paddlers each) on calm water fifteen minutes up the highway, and the <a class="ln" href="https://seatoskytrails.com/water-sports/">corridor water guide</a> covers the rest of the options. Warm-lake swim, bluff views, and an evening paddle: that&rsquo;s a complete Sea to Sky day.</p>
+  </div>
+</section>
+
+<!-- ===================== FAQ ===================== -->
+<section class="faq" id="faq">
+  <div class="col">
+    <div class="eyebrow">Field Questions</div>
+    <h2 style="margin-bottom:2rem;">Asked on the trail, answered here.</h2>
+
+    <details>
+      <summary>How long is the Petgill Lake hike?</summary>
+      <p>Roughly 11&ndash;12 km round trip with on the order of 600 m of cumulative elevation gain, spread across constant rolling ups and downs. Most parties take 4&ndash;6 hours car to car, plus however long you spend at the lake &mdash; and you should spend a while.</p>
+    </details>
+
+    <details>
+      <summary>Can you actually swim in Petgill Lake?</summary>
+      <p>Yes &mdash; and unusually for the Sea to Sky corridor, it&rsquo;s genuinely warm by mid-summer, not just tolerable. It&rsquo;s a shallow forest lake that soaks up heat through July and August. There are lily pads, logs to sun on, and no lifeguard, so swim with the usual backcountry caution.</p>
+    </details>
+
+    <details>
+      <summary>Where does the trail start, and where do I park?</summary>
+      <p>The traditional start is near Murrin Provincial Park on Highway 99, south of Squamish near Britannia Beach, and involves crossing the highway. Access and trailhead arrangements here have been subject to change, so verify the current trailhead status and parking rules before you go, be extremely careful near the highway, and note that Murrin&rsquo;s lot fills early on summer weekends.</p>
+    </details>
+
+    <details>
+      <summary>How hard is it, really?</summary>
+      <p>Moderate, but sneaky. No single climb is long, yet the trail rolls the whole way, so the cumulative effort is bigger than the stats suggest &mdash; especially on the return leg, which keeps finding small rises when you think you&rsquo;re done. Reasonably fit hikers manage it comfortably with enough water and snacks.</p>
+    </details>
+
+    <details>
+      <summary>Are there toilets, bins, or any facilities at the lake?</summary>
+      <p>None at all &mdash; no outhouse, no garbage bins, no services of any kind. Pack out absolutely everything you carry in, including food scraps.</p>
+    </details>
+
+    <details>
+      <summary>Can I bring my dog?</summary>
+      <p>Dogs do this trail regularly, but check current signage and rules at the trailhead before you go, keep your dog under close control near the highway crossing and the bluff edges, and pack out after them. Carry water for the dog too &mdash; the rolling trail works them as hard as it works you.</p>
+    </details>
+
+    <details>
+      <summary>When is the best time to go?</summary>
+      <p>Mid-July through August for the warm-water swimming, on a weekday if you can manage it. September is the connoisseur&rsquo;s pick: the lake holds some warmth early in the month, the crowds are gone, and the autumn light over Howe Sound from the bluffs is the best of the year.</p>
+    </details>
+
+    <details>
+      <summary>Is there cell service on the trail?</summary>
+      <p>Don&rsquo;t count on it. Coverage in the forest above the highway is patchy at best, so download any maps before you leave, tell someone your plan, and treat the hike as self-supported.</p>
+    </details>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="end">
+  <div class="shell">
+    <div class="grid">
+      <div>
+        <h4>This Guide</h4>
+        <p>Petgill Lake is entry No. 07 in Volume II of <a class="ln" href="https://seatoskytrails.com/">Sea to Sky Trails</a> &mdash; a slow-built, reader-funded field guide to the lakes, bluffs, and quiet corners of the Coast Mountains.</p>
+      </div>
+      <div>
+        <h4>More Field Guides</h4>
+        <ul>
+          <li><a href="https://murrinpark.com/">Murrin Park &amp; Browning Lake</a></li>
+          <li><a href="https://porteau-cove.ca/">Porteau Cove</a></li>
+          <li><a href="https://brohmlake.ca/">Brohm Lake</a></li>
+          <li><a href="https://alicelakesquamish.com/">Alice Lake</a></li>
+          <li><a href="https://joffrelake.com/">Joffre Lakes</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Nearby &amp; Useful</h4>
+        <ul>
+          <li><a href="https://squamishcanoerental.com/">Squamish Canoe Rental</a></li>
+          <li><a href="https://rentedlocal.com/Profile?userId=698a2b3bca1e37a683b7bfeb" target="_blank" rel="noopener">Gear delivery &amp; rentals</a></li>
+          <li><a href="https://seatoskytrails.com/water-sports/">Corridor water guide</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <div>Part of <a class="ln" href="https://seatoskytrails.com/"><em>Sea to Sky Trails</em></a> &middot; Vol. II, No. 07 &middot; Published with respect on the territory of the Sḵwx̱wú7mesh Úxwumixw (Squamish Nation).</div>
+      <div>Set in Fraunces &amp; Inter. Reader-funded.</div>
+    </div>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TouristAttraction",
+  "name": "Petgill Lake",
+  "url": "https://petgilllake.com/",
+  "description": "A small forested lake above Howe Sound near Britannia Beach, BC, reached by a rolling 11–12 km round-trip hike starting near Murrin Provincial Park. Known for bluff viewpoints over Howe Sound and unusually warm mid-summer swimming.",
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 49.66,
+    "longitude": -123.20
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressRegion": "British Columbia",
+    "addressCountry": "CA"
+  },
+  "isAccessibleForFree": true,
+  "touristType": "Hikers"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How long is the Petgill Lake hike?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Roughly 11–12 km round trip with on the order of 600 m of cumulative elevation gain, spread across constant rolling ups and downs. Most parties take 4–6 hours car to car, plus time at the lake." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you actually swim in Petgill Lake?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes — and unusually for the Sea to Sky corridor, it's genuinely warm by mid-summer, not just tolerable. It's a shallow forest lake with lily pads and logs to sun on. There is no lifeguard, so swim with backcountry caution." }
+    },
+    {
+      "@type": "Question",
+      "name": "Where does the trail start, and where do I park?",
+      "acceptedAnswer": { "@type": "Answer", "text": "The traditional start is near Murrin Provincial Park on Highway 99, south of Squamish near Britannia Beach, and involves crossing the highway. Access has been subject to change, so verify current trailhead status and parking rules before you go, be extremely careful near the highway, and note that Murrin's lot fills early on summer weekends." }
+    },
+    {
+      "@type": "Question",
+      "name": "How hard is it, really?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Moderate, but sneaky. No single climb is long, yet the trail rolls the whole way, so the cumulative effort is bigger than the stats suggest — especially on the return leg. Reasonably fit hikers manage it comfortably with enough water and snacks." }
+    },
+    {
+      "@type": "Question",
+      "name": "Are there toilets, bins, or any facilities at the lake?",
+      "acceptedAnswer": { "@type": "Answer", "text": "None at all — no outhouse, no garbage bins, no services of any kind. Pack out absolutely everything you carry in, including food scraps." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I bring my dog?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Dogs do this trail regularly, but check current signage and rules at the trailhead, keep your dog under close control near the highway crossing and the bluff edges, and pack out after them. Carry water for the dog too." }
+    },
+    {
+      "@type": "Question",
+      "name": "When is the best time to go?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Mid-July through August for the warm-water swimming, on a weekday if possible. September is the connoisseur's pick: the lake holds some warmth early in the month, the crowds are gone, and the autumn light over Howe Sound is the best of the year." }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there cell service on the trail?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Don't count on it. Coverage in the forest above the highway is patchy at best, so download maps before you leave, tell someone your plan, and treat the hike as self-supported." }
+    }
+  ]
+}
+</script>
+
+</body>
+</html>
